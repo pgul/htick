@@ -1,0 +1,22 @@
+HTICK 1.0-stable (started 25.06.2002)
+
+This file describe changes between htick-0.9 and htick-1.0
+
+1. MAJOR feature improvements:
+   - forward requests to uplink;
+   - filelist building.
+
+2. CONFIG changes:
+   - FileForwardRequest : 
+   - RemoteFileRobotName (in link definition) : Name of remote file (tic) robot
+     (need for FileForwardRequest)
+   - FileDescName : file with archive description (usually file_id.diz)
+   - FileAreaDefaults : default parameters for autocreate filearea
+   - BBSArea : BBS files directory (for file list building)
+   - FileEchoFlavour (in link definition) : set outbound flavor for fileecho
+     files (Imm, Crash, Direct, Hold, Normal)
+
+3. IMPORTANT bugfixes:
+
+
+$Id$

@@ -1,0 +1,24 @@
+# Sample config for htick (include it to main $FIDOCONFIG)
+
+FileAreaBaseDir		/home/ftp/pub/fileechoes
+PassFileAreaDir		/var/spool/ftn/passthrough
+
+FileFixHelp		/etc/husky/filefix.hlp
+FileFixKillReports
+FileFixKillRequests
+
+if "[module]"=="htick"
+
+AreaFixFromName		FileFix
+
+OriginInAnnounce
+ConvertLongNames	DontTouch
+FileDescName		file_id.diz
+FileAreaCreatePerms	0755
+FileDescPos		13
+
+ExecOnFile	NODEDIFF nodediff.* make-ndl
+ExecOnFile	MU.AREALIST 5080elst.zip unzip -q -o -d /var/lib/ftn/husky
+ExecOnFile	MU.AREALIST 5080flst.zip unzip -q -o -d /var/lib/ftn/husky
+
+endif
